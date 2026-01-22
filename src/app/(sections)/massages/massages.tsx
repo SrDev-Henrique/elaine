@@ -1,3 +1,5 @@
+"use client";
+
 import { Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,10 +11,12 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useDimension } from "@/lib/use-dimension";
 import { cn } from "@/lib/utils";
 import { massages } from "./lib/data";
 
 export function Massages() {
+  const { width } = useDimension();
   return (
     <div className="flex min-h-screen w-full flex-col items-center gap-10">
       <div className="flex w-full flex-col items-center gap-4">
@@ -28,9 +32,11 @@ export function Massages() {
       </div>
       <div className="flex w-full flex-col items-center gap-6">
         <div className="relative grid w-fit grid-cols-1 place-items-center justify-center gap-x-6 gap-y-8 md:grid-cols-2">
-          <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 aspect-square w-10 flex-center rounded-2xl">
-            <Alternate size={32} color="#dcab6b" />
-          </div>
+          {width && width > 768 && (
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 aspect-square w-10 flex-center rounded-2xl">
+              <Alternate size={32} color="#dcab6b" />
+            </div>
+          )}
           {massages.map((massage) => (
             <div
               key={massage.id}
