@@ -61,7 +61,7 @@ export function Me() {
       >
         {JSON.stringify(jsonLd)}
       </Script>
-      <section className="min-h-screen w-full">
+      <section className="h-fit w-full">
         <div className="flex flex-col gap-6 xl:min-h-[600px] xl:flex-row xl:items-end xl:justify-between">
           <div className="flex w-full flex-col gap-6 xl:justify-between">
             <div className="space-y-6">
