@@ -8,17 +8,6 @@ import { Button } from "@/components/ui/button";
 const popularMassages = ["Nuru", "Vivência", "Mix Tântrico"];
 
 export function Hero() {
-  const openMaps = () => {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-
-    const address = encodeURIComponent("Av. Cunha mota, 107, Campinas, SP");
-
-    const url = isIOS
-      ? `https://maps.apple.com/?q=${address}`
-      : `https://www.google.com/maps?q=${address}`;
-
-    window.open(url, "_blank");
-  };
   return (
     <section
       id="massagem-tantrica-campinas"
@@ -30,10 +19,10 @@ export function Hero() {
       <div className="flex h-fit w-full flex-col items-center justify-between gap-10 lg:flex-row lg:items-start lg:justify-center">
         <div className="relative aspect-video w-full max-w-2xl overflow-hidden rounded-xl lg:aspect-12/16 lg:max-w-sm">
           <Image
-            src="/images/about(0).webp"
+            src="/images/elaine(1).jpeg"
             alt="Elaine, massoterapeuta especializada em massagem tântrica e Nuru em Campinas"
             fill
-            className="object-cover object-center"
+            className="object-cover object-[50%_20%] lg:object-center"
             itemProp="image"
           />
         </div>
@@ -64,23 +53,18 @@ export function Hero() {
                   <Calendar className="size-3 sm:size-4" />
                 </div>
               </Button>
-              <Button
-                variant="outline"
-                className="cursor-pointer rounded-full border-primary bg-transparent px-2 py-5.5 text-primary-foreground text-xs hover:bg-primary/10 hover:text-primary-foreground"
-                onClick={openMaps}
-                aria-label="Abrir rota para Rua Cunha Mota, 107 em Campinas"
+              <div
+                className="flex w-fit items-center gap-2 rounded-full border border-primary p-2"
+                itemProp="addressLocality"
               >
-                <div className="flex items-center gap-2" itemProp="address">
-                  <Localization color="oklch(1 0 0)" />
-                  <span itemProp="streetAddress">Rua Cunha Mota, 107</span>
-                  <span
-                    className="text-muted-bright-foreground text-xs"
-                    itemProp="addressLocality"
-                  >
+                <Localization color="oklch(1 0 0)" />
+                <p className="text-primary-foreground">
+                  Guanabara,{" "}
+                  <span className="text-muted-bright-foreground text-xs">
                     Campinas, SP
                   </span>
-                </div>
-              </Button>
+                </p>
+              </div>
             </div>
             <div className="flex items-center gap-2 rounded-full bg-foreground/30 p-2">
               <p className="text-nowrap font-semibold bmd:text-base text-primary-foreground text-xs">
