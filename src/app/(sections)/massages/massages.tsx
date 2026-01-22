@@ -18,13 +18,26 @@ import { massages } from "./lib/data";
 export function Massages() {
   const { width } = useDimension();
   return (
-    <div className="flex min-h-screen w-full flex-col items-center gap-10">
+    <section
+      id="servicos-de-massagem"
+      aria-labelledby="massages-heading"
+      itemScope
+      itemType="https://schema.org/ItemList"
+      className="flex min-h-screen w-full flex-col items-center gap-10"
+    >
       <div className="flex w-full flex-col items-center gap-4">
-        <h1 className="mx-auto w-fit text-center font-bold text-4xl md:text-5xl lg:text-6xl">
+        <h2
+          id="massages-heading"
+          itemProp="name"
+          className="mx-auto w-fit text-center font-bold text-4xl md:text-5xl lg:text-6xl"
+        >
           Meus Serviços
-        </h1>
+        </h2>
         <div className="w-md">
-          <p className="text-center text-muted text-sm md:text-base lg:text-lg">
+          <p
+            itemProp="description"
+            className="text-center text-muted text-sm md:text-base lg:text-lg"
+          >
             Cada sessão é um convite à entrega, respeitando seus limites e
             despertando sensações através de uma experiência sensorial completa.
           </p>
@@ -37,26 +50,31 @@ export function Massages() {
               <Alternate size={32} color="#dcab6b" />
             </div>
           )}
-          {massages.map((massage) => (
+          {massages.map((massage, index) => (
             <div
               key={massage.id}
               className={cn(
                 "relative h-[400px] max-w-md overflow-hidden rounded-4xl bg-muted md:aspect-square md:h-auto md:max-w-sm",
                 massage.color,
               )}
+              itemScope
+              itemType="https://schema.org/Service"
+              itemProp="itemListElement"
+              data-position={index + 1}
             >
               <div className="absolute inset-0">
                 <Image
                   src={massage.image}
-                  alt={massage.name}
+                  alt={`${massage.name} em Campinas`}
                   fill
                   className="object-cover object-center"
+                  itemProp="image"
                 />
               </div>
               <div className="relative z-2 flex size-full flex-col justify-between gap-6 p-4 backdrop-blur-sm backdrop-brightness-65">
                 <div className="flex items-start justify-between gap-4">
                   <div className="h-13 w-fit flex-center rounded-full bg-primary px-4 backdrop-blur-sm">
-                    <p className="text-primary-foreground text-sm">
+                    <p className="text-primary-foreground text-sm" itemProp="name">
                       {massage.name}
                     </p>
                   </div>
@@ -83,7 +101,7 @@ export function Massages() {
                       <Calendar className="size-3 sm:size-4" />
                     </div>
                   </Button>
-                  <p className="text-primary-foreground">
+                  <p className="text-primary-foreground" itemProp="description">
                     {massage.description}
                   </p>
                 </div>
@@ -92,6 +110,6 @@ export function Massages() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

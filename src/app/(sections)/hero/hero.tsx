@@ -20,27 +20,42 @@ export function Hero() {
     window.open(url, "_blank");
   };
   return (
-    <div className="flex h-fit w-full items-start pt-24 lg:min-h-screen lg:items-center">
+    <section
+      id="massagem-tantrica-campinas"
+      aria-labelledby="hero-heading"
+      itemScope
+      itemType="https://schema.org/HealthAndBeautyBusiness"
+      className="flex h-fit w-full items-start pt-24 lg:min-h-screen lg:items-center"
+    >
       <div className="flex h-fit w-full flex-col items-center justify-between gap-10 lg:flex-row lg:items-start lg:justify-center">
         <div className="relative aspect-video w-full max-w-2xl overflow-hidden rounded-xl lg:aspect-12/16 lg:max-w-sm">
           <Image
             src="/images/about(0).webp"
-            alt="Elaine Massoterapeuta"
+            alt="Elaine, massoterapeuta especializada em massagem tântrica e Nuru em Campinas"
             fill
             className="object-cover object-center"
+            itemProp="image"
           />
         </div>
         <div className="h-fit w-full max-w-2xl">
           <div className="space-y-4">
-            <h2 className="font-bold text-[3.5rem] sm:text-4xl lg:text-7xl">
+            <h1
+              id="hero-heading"
+              itemProp="name"
+              className="font-bold text-[3.5rem] sm:text-4xl lg:text-7xl"
+            >
               Massagem Tântrica e Nuru em Campinas
-            </h2>
-            <p className="text-muted-bright-foreground text-sm lg:pt-4 lg:text-base">
+            </h1>
+            <p
+              itemProp="description"
+              className="text-muted-bright-foreground text-sm lg:pt-4 lg:text-base"
+            >
               <span className="font-bold text-muted">
                 Massagem tântrica e Nuru em Campinas
               </span>
               , pensadas para despertar sensações com técnica, presença e
-              ambiente intimista.
+              ambiente intimista. Atendimento em estúdio privativo na região
+              central de Campinas.
             </p>
             <div className="flex w-full items-center justify-between gap-2 lg:justify-start">
               <Button className="cursor-pointer rounded-full py-5.5 pe-2">
@@ -53,11 +68,15 @@ export function Hero() {
                 variant="outline"
                 className="cursor-pointer rounded-full border-primary bg-transparent px-2 py-5.5 text-primary-foreground text-xs hover:bg-primary/10 hover:text-primary-foreground"
                 onClick={openMaps}
+                aria-label="Abrir rota para Rua Cunha Mota, 107 em Campinas"
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2" itemProp="address">
                   <Localization color="oklch(1 0 0)" />
-                  Rua Cunha Mota, 107
-                  <span className="text-muted-bright-foreground text-xs">
+                  <span itemProp="streetAddress">Rua Cunha Mota, 107</span>
+                  <span
+                    className="text-muted-bright-foreground text-xs"
+                    itemProp="addressLocality"
+                  >
                     Campinas, SP
                   </span>
                 </div>
@@ -86,6 +105,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,6 +1,6 @@
 import { Calendar } from "lucide-react";
-import Script from "next/dist/client/script";
 import Image from "next/image";
+import Script from "next/script";
 import { Heart } from "@/components/icons/heart";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -61,11 +61,28 @@ export function Me() {
       >
         {JSON.stringify(jsonLd)}
       </Script>
-      <section className="h-fit w-full">
+      <section
+        id="elaine-massagista-campinas"
+        aria-labelledby="about-elaine-heading"
+        itemScope
+        itemType="https://schema.org/LocalBusiness"
+        className="h-fit w-full"
+      >
+        <meta
+          itemProp="url"
+          content="https://seusite.com/elaine-massagem-tantrica-nuru-campinas"
+        />
+        <meta itemProp="telephone" content="+55 19 XXXXX-XXXX" />
+        <meta itemProp="priceRange" content="R$xx–R$yy" />
+        <meta itemProp="areaServed" content="Campinas, SP" />
         <div className="flex flex-col gap-6 xl:min-h-[600px] xl:flex-row xl:items-end xl:justify-between">
           <div className="flex w-full flex-col gap-6 xl:justify-between">
             <div className="space-y-6">
-              <h2 className="font-bold text-4xl md:text-5xl lg:text-6xl">
+              <h2
+                id="about-elaine-heading"
+                itemProp="name"
+                className="font-bold text-4xl md:text-5xl lg:text-6xl"
+              >
                 Elaine - Massagista <span className="text-gold">Tântrica</span>,{" "}
                 <span className="text-gold">Nuru e Vivência</span> em Campinas -
                 SP
@@ -78,26 +95,26 @@ export function Me() {
                   </p>
                   👋🏻
                 </div>
-                <p>
+                <p itemProp="description">
                   Eu sou uma massagista certificada especializada em{" "}
                   <span className="text-gold">
                     massagem tântrica, Nuru e vivência em Campinas
                   </span>
                   , atendendo em ambiente privativo e discreto na Av. Brasil.
                 </p>
-                <p>
+                <p itemProp="description">
                   Com mais de 2 anos de experiência, eu combino técnica,
                   presença e sensibilidade para criar sessões personalizadas que
                   convidam à presença, ao autoconhecimento corporal e ao
                   despertar das sensações.
                 </p>
-                <p>
+                <p itemProp="description">
                   Cada atendimento é planejado com cuidados de higiene, conforto
                   e respeito aos seus limites — óleos aquecidos, respiração
                   guiada e toques conscientes que equilibram{" "}
                   <span className="text-gold">relaxamento e prazer sutil</span>.
                 </p>
-                <p>
+                <p itemProp="description">
                   Se você busca uma{" "}
                   <span className="text-gold">
                     experiência sensorial profissional e segura em Campinas
@@ -153,6 +170,7 @@ export function Me() {
               alt="Elaine, massagista tântrica e Nuru em Campinas — atendimento em ambiente privativo (Av. Brasil)"
               fill
               className="object-cover object-top"
+              itemProp="image"
             />
           </div>
         </div>
