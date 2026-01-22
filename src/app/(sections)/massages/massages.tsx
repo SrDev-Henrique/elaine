@@ -15,8 +15,17 @@ import { useDimension } from "@/lib/use-dimension";
 import { cn } from "@/lib/utils";
 import { massages } from "./lib/data";
 
+import { useEffect, useState } from "react";
+
 export function Massages() {
   const { width } = useDimension();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setIsMounted(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
+
   return (
     <section
       id="servicos-de-massagem"
@@ -45,7 +54,7 @@ export function Massages() {
       </div>
       <div className="flex w-full flex-col items-center gap-6">
         <div className="relative grid w-fit grid-cols-1 place-items-center justify-center gap-x-6 gap-y-8 md:grid-cols-2">
-          {width && width > 768 && (
+          {isMounted && width && width > 768 && (
             <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 aspect-square w-10 flex-center rounded-2xl">
               <Alternate size={32} color="#dcab6b" />
             </div>
@@ -74,7 +83,10 @@ export function Massages() {
               <div className="relative z-2 flex size-full flex-col justify-between gap-6 p-4 backdrop-blur-sm backdrop-brightness-65">
                 <div className="flex items-start justify-between gap-4">
                   <div className="h-13 w-fit flex-center rounded-full bg-primary px-4 backdrop-blur-sm">
-                    <p className="text-primary-foreground text-sm" itemProp="name">
+                    <p
+                      className="text-primary-foreground text-sm"
+                      itemProp="name"
+                    >
                       {massage.name}
                     </p>
                   </div>
