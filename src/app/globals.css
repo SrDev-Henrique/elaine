@@ -278,6 +278,11 @@
     font-family: var(--font-roboto);
     font-weight: 400;
     line-height: 1.6;
+    color: var(--color-muted-bright-foreground);
+  }
+  ::selection {
+    background-color: var(--color-primary); /* fundo da seleção */
+    color: var(--color-primary-foreground); /* cor do texto */
   }
 }
 
