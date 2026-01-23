@@ -31,7 +31,7 @@ export function Massages() {
       aria-labelledby="massages-heading"
       itemScope
       itemType="https://schema.org/ItemList"
-      className="flex min-h-screen w-full flex-col items-center gap-10"
+      className="flex min-h-screen w-full flex-col items-center gap-10 overflow-x-hidden"
     >
       <div className="flex w-full flex-col items-center gap-4">
         <h2
