@@ -3,6 +3,7 @@
 import { Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Alternate } from "@/components/icons/alternate";
 import { Arrow } from "@/components/icons/arrow";
 import { Button } from "@/components/ui/button";
@@ -14,8 +15,6 @@ import {
 import { useDimension } from "@/lib/use-dimension";
 import { cn } from "@/lib/utils";
 import { massages } from "./lib/data";
-
-import { useEffect, useState } from "react";
 
 export function Massages() {
   const { width } = useDimension();
