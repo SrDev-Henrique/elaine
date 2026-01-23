@@ -47,7 +47,7 @@ export function Me() {
       addressCountry: "BR",
     },
     areaServed: "Campinas, SP",
-    priceRange: "R$300–R$899",
+    priceRange: "R$400–R$1200",
     openingHours: ["Mo-Su 09:00-20:00"],
   };
 
@@ -72,7 +72,7 @@ export function Me() {
           content="https://seusite.com/elaine-massagem-tantrica-nuru-campinas"
         />
         <meta itemProp="telephone" content="+55 19 XXXXX-XXXX" />
-        <meta itemProp="priceRange" content="R$300–R$899" />
+        <meta itemProp="priceRange" content="R$400–R$1200" />
         <meta itemProp="areaServed" content="Campinas, SP" />
         <div className="flex flex-col gap-6 xl:min-h-[600px] xl:flex-row xl:items-end xl:justify-between">
           <div className="flex w-full flex-col gap-6 xl:justify-between">
