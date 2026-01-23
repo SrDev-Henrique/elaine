@@ -1,3 +1,4 @@
+import { Faq } from "./(sections)/faq/faq";
 import { Hero } from "./(sections)/hero/hero";
 import { Massages } from "./(sections)/massages/massages";
 import { Me } from "./(sections)/me/me";
@@ -12,6 +13,7 @@ export default function Home() {
       <Me />
       <Studio />
       <Review />
+      <Faq />
     </div>
   );
 }

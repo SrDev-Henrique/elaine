@@ -74,8 +74,8 @@ export function Me() {
         <meta itemProp="telephone" content="+55 19 XXXXX-XXXX" />
         <meta itemProp="priceRange" content="R$400–R$1200" />
         <meta itemProp="areaServed" content="Campinas, SP" />
-        <div className="flex flex-col gap-6 xl:min-h-[600px] xl:flex-row xl:items-end xl:justify-between">
-          <div className="flex w-full flex-col gap-6 xl:justify-between">
+        <div className="mx-auto flex w-full max-w-[1130px] flex-col gap-6">
+          <div className="flex w-full flex-col gap-6">
             <div className="space-y-6">
               <h2
                 id="about-elaine-heading"
@@ -123,7 +123,7 @@ export function Me() {
                 </p>
               </div>
             </div>
-            <div className="flex h-fit flex-col-reverse gap-6 lg:flex-row lg:justify-between lg:gap-8">
+            <div className="flex h-fit flex-col-reverse gap-6 md:flex-row md:justify-between lg:gap-8">
               <div className="flex flex-col gap-6 rounded-xl border border-primary p-2">
                 <Heart size={50} color="oklch(0.465 0.147 24.9381)" />
                 <div className="space-y-4">
@@ -163,12 +163,12 @@ export function Me() {
               </div>
             </div>
           </div>
-          <div className="relative aspect-square bmd:aspect-video h-full overflow-hidden rounded-2xl sm:max-h-[600px] xl:aspect-12/16 xl:max-h-none xl:min-w-1/3">
+          <div className="relative aspect-square h-full overflow-hidden rounded-2xl sm:max-h-[700px]">
             <Image
               src="/images/elaine.jpeg"
               alt="Elaine, massagista tântrica e Nuru em Campinas — atendimento em ambiente privativo (Av. Brasil)"
               fill
-              className="object-cover object-top"
+              className="object-cover object-[50%_35%]"
               itemProp="image"
             />
           </div>
