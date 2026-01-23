@@ -56,23 +56,44 @@ export const reviews: Review[] = [
 
 export function Review() {
   return (
-    <div className="mx-auto min-h-screen w-full max-w-[1130px] space-y-10">
+    <section
+      id="avaliacoes-clientes"
+      aria-labelledby="reviews-heading"
+      itemScope
+      itemType="https://schema.org/ItemList"
+      className="mx-auto min-h-screen w-full max-w-[1130px] space-y-10"
+    >
+      <meta itemProp="name" content="Avaliações de clientes de massagem em Campinas" />
+      <meta itemProp="itemListOrder" content="Unordered" />
+      <meta itemProp="numberOfItems" content={reviews.length.toString()} />
       <div className="relative h-fit w-full overflow-hidden rounded-xl">
         <div className="relative bmd:min-h-[570px] min-h-[500px] w-full">
           <Image
             src="/images/review(1).webp"
-            alt="Review"
+            alt="Ambiente acolhedor para massagem tântrica e Nuru em Campinas"
             fill
             className="object-cover object-center brightness-60"
+            itemProp="image"
           />
         </div>
         <ReviewCardContent />
       </div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {reviews.map((review) => (
-          <ReviewCard key={review.id} {...review} />
+        {reviews.map((review, index) => (
+          <div
+            key={review.id}
+            itemProp="itemListElement"
+            itemScope
+            itemType="https://schema.org/Review"
+            data-position={index + 1}
+          >
+            <meta itemProp="position" content={(index + 1).toString()} />
+            <meta itemProp="author" content={review.name} />
+            <meta itemProp="reviewBody" content={review.review} />
+            <ReviewCard {...review} />
+          </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

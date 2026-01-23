@@ -1,12 +1,41 @@
-import FaqAccordion from "./components/accordion";
+import Script from "next/script";
+import FaqAccordion, { faq } from "./components/accordion";
 
 export function Faq() {
   return (
-    <div className="mx-auto h-fit w-full max-w-[1130px] space-y-6">
-      <h1 className="text-center font-bold text-3xl sm:text-4xl">
+    <section
+      id="faq-massagem-campinas"
+      aria-labelledby="faq-heading"
+      itemScope
+      itemType="https://schema.org/FAQPage"
+      className="mx-auto h-fit w-full max-w-[1130px] space-y-6"
+    >
+      <h2
+        id="faq-heading"
+        className="text-center font-bold text-3xl sm:text-4xl"
+        itemProp="name"
+      >
         Perguntas Frequentes
-      </h1>
+      </h2>
+      <Script
+        id="faq-structured-data"
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faq.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        })}
+      </Script>
       <FaqAccordion />
-    </div>
+    </section>
   );
 }

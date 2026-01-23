@@ -7,7 +7,7 @@ import {
   AccordionItem,
 } from "@/components/ui/accordion";
 
-const faq = [
+export const faq = [
   {
     id: 1,
     question: "O que é a massagem Nuru e como ela é feita?",

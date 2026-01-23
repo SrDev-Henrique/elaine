@@ -60,8 +60,20 @@ const badges = [
 
 export function Studio() {
   return (
-    <div className="mx-auto h-fit w-full max-w-[1130px] space-y-10">
-      <h2 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl">
+    <section
+      id="studio-massagem-campinas"
+      aria-labelledby="studio-heading"
+      itemScope
+      itemType="https://schema.org/Place"
+      className="mx-auto h-fit w-full max-w-[1130px] space-y-10"
+    >
+      <meta itemProp="name" content="Ambiente privativo de massagem em Campinas" />
+      <meta itemProp="address" content="Av. Brasil, Campinas, SP" />
+      <meta itemProp="amenityFeature" content="Estacionamento, ducha quente, ambiente privativo" />
+      <h2
+        id="studio-heading"
+        className="text-center font-bold text-4xl md:text-5xl lg:text-6xl"
+      >
         Meu Espaço
       </h2>
       <Card className="mx-auto w-fit border-none bg-foreground lg:w-full">
@@ -71,7 +83,7 @@ export function Studio() {
               <Carousel className="w-full">
                 <CarouselContent>
                   {studioImages.map((image) => (
-                    <CarouselItem key={image.id}>
+                    <CarouselItem key={image.id} itemProp="photo">
                       <div className="p-1">
                         <div className="relative aspect-square max-h-[500px] w-full overflow-hidden rounded-xl lg:max-h-none">
                           <Image
@@ -79,6 +91,7 @@ export function Studio() {
                             alt={image.alt}
                             fill
                             className="object-cover object-center"
+                            itemProp="image"
                           />
                         </div>
                       </div>
@@ -91,7 +104,10 @@ export function Studio() {
             </div>
             <div className="flex w-full flex-col justify-between gap-6 lg:min-w-lg">
               <div className="space-y-6">
-                <h3 className="font-bold text-3xl md:text-4xl lg:text-5xl">
+                <h3
+                  className="font-bold text-3xl md:text-4xl lg:text-5xl"
+                  itemProp="description"
+                >
                   Espaço Privativo e Intimista em Campinas
                 </h3>
                 <div className="flex w-full items-center gap-2">
@@ -146,6 +162,6 @@ export function Studio() {
           </div>
         </CardContent>
       </Card>
-    </div>
+    </section>
   );
 }

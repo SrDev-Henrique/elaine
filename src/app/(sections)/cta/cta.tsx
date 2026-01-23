@@ -2,11 +2,25 @@ import { ScheduleForm } from "./components/schedule-form";
 
 export function Cta() {
   return (
-    <div className="mx-auto h-fit w-full max-w-[1130px] space-y-10">
-      <h1 className="text-center font-bold text-3xl md:text-4xl lg:text-5xl">
+    <section
+      id="agendar-sessao-massagem"
+      aria-labelledby="cta-heading"
+      itemScope
+      itemType="https://schema.org/Action"
+      className="mx-auto h-fit w-full max-w-[1130px] space-y-10"
+    >
+      <meta itemProp="name" content="Agendar sessão de massagem em Campinas" />
+      <meta
+        itemProp="description"
+        content="Formulário para agendamento de massagem tântrica, Nuru, Mix Tântrico ou Vivência em Campinas."
+      />
+      <h2
+        id="cta-heading"
+        className="text-center font-bold text-3xl md:text-4xl lg:text-5xl"
+      >
         Agende Sua Sessão
-      </h1>
+      </h2>
       <ScheduleForm />
-    </div>
+    </section>
   );
 }
