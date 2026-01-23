@@ -33,10 +33,10 @@ export function Me() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Elaine — Massagista",
+    name: "Hellen — Massagista",
     description:
       "Massagem tântrica, Nuru e vivência em ambiente privativo na Av. Brasil, Campinas. Técnica, discrição e atendimento personalizado.",
-    url: "https://seusite.com/elaine-massagem-tantrica-nuru-campinas",
+    url: "https://seusite.com/Hellen-massagem-tantrica-nuru-campinas",
     image: "https://seusite.com/images/me.webp",
     telephone: "+55 19 XXXXX-XXXX",
     address: {
@@ -61,15 +61,15 @@ export function Me() {
         {JSON.stringify(jsonLd)}
       </Script>
       <section
-        id="elaine-massagista-campinas"
-        aria-labelledby="about-elaine-heading"
+        id="Hellen-massagista-campinas"
+        aria-labelledby="about-Hellen-heading"
         itemScope
         itemType="https://schema.org/LocalBusiness"
         className="h-fit w-full"
       >
         <meta
           itemProp="url"
-          content="https://seusite.com/elaine-massagem-tantrica-nuru-campinas"
+          content="https://seusite.com/Hellen-massagem-tantrica-nuru-campinas"
         />
         <meta itemProp="telephone" content="+55 19 XXXXX-XXXX" />
         <meta itemProp="priceRange" content="R$400–R$1200" />
@@ -78,11 +78,11 @@ export function Me() {
           <div className="flex w-full flex-col gap-6">
             <div className="space-y-6">
               <h2
-                id="about-elaine-heading"
+                id="about-Hellen-heading"
                 itemProp="name"
                 className="font-bold text-4xl md:text-5xl lg:text-6xl"
               >
-                Elaine - Massagista <span className="text-gold">Tântrica</span>,{" "}
+                Hellen - Massagista <span className="text-gold">Tântrica</span>,{" "}
                 <span className="text-gold">Nuru e Vivência</span> em Campinas -
                 SP
               </h2>
@@ -90,7 +90,7 @@ export function Me() {
               <div className="space-y-4">
                 <div className="flex w-fit items-center gap-2 rounded-full bg-primary px-3 py-4">
                   <p className="font-bold text-primary-foreground">
-                    Olá, me chamo Elaine
+                    Olá, me chamo Hellen
                   </p>
                   👋🏻
                 </div>
@@ -165,8 +165,8 @@ export function Me() {
           </div>
           <div className="relative aspect-square h-full overflow-hidden rounded-2xl sm:max-h-[700px]">
             <Image
-              src="/images/elaine.jpeg"
-              alt="Elaine, massagista tântrica e Nuru em Campinas — atendimento em ambiente privativo (Av. Brasil)"
+              src="/images/hellen.jpeg"
+              alt="Hellen, massagista tântrica e Nuru em Campinas — atendimento em ambiente privativo (Av. Brasil)"
               fill
               className="object-cover object-[50%_35%]"
               itemProp="image"

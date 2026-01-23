@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Elaine Massoterapeuta",
+  title: "Hellen Massoterapeuta",
   description:
-    "Sou Elaine, massoterapeuta especializada em massagem nuru, tântrica, mix tântrico e vivência em Campinas, Avenida Brasil. Tenho mais de 2 anos de experiência na área da massagem sensual em campinas.",
+    "Sou Hellen, massoterapeuta especializada em massagem nuru, tântrica, mix tântrico e vivência em Campinas, Avenida Brasil. Tenho mais de 2 anos de experiência na área da massagem sensual em campinas.",
 };
 
 export default function RootLayout({

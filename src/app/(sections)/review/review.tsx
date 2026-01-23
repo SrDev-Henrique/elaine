@@ -50,7 +50,7 @@ export const reviews: Review[] = [
     name: "Thiago R",
     fallback: "TR",
     review:
-      "Nunca tinha sentido uma massagem tão diferente. A Elaine sabe o que faz — o toque é firme e delicado ao mesmo tempo. Saí mais leve do que imaginei.",
+      "Nunca tinha sentido uma massagem tão diferente. A Hellen sabe o que faz — o toque é firme e delicado ao mesmo tempo. Saí mais leve do que imaginei.",
   },
 ];
 

@@ -19,8 +19,8 @@ export function Hero() {
       <div className="flex h-fit w-full flex-col items-center justify-between gap-10 lg:flex-row lg:items-start lg:justify-center">
         <div className="relative aspect-video w-full max-w-2xl overflow-hidden rounded-xl lg:aspect-12/16 lg:max-w-sm">
           <Image
-            src="/images/elaine(1).jpeg"
-            alt="Elaine, massoterapeuta especializada em massagem tântrica e Nuru em Campinas"
+            src="/images/hellen(1).jpeg"
+            alt="Hellen, massoterapeuta especializada em massagem tântrica e Nuru em Campinas"
             fill
             className="object-cover object-[50%_20%] lg:object-center"
             itemProp="image"
