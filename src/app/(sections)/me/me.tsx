@@ -44,11 +44,10 @@ export function Me() {
       streetAddress: "Av. Brasil",
       addressLocality: "Campinas",
       addressRegion: "SP",
-      postalCode: "XXXXX-XXX",
       addressCountry: "BR",
     },
     areaServed: "Campinas, SP",
-    priceRange: "R$xx–R$yy",
+    priceRange: "R$300–R$899",
     openingHours: ["Mo-Su 09:00-20:00"],
   };
 
@@ -73,7 +72,7 @@ export function Me() {
           content="https://seusite.com/elaine-massagem-tantrica-nuru-campinas"
         />
         <meta itemProp="telephone" content="+55 19 XXXXX-XXXX" />
-        <meta itemProp="priceRange" content="R$xx–R$yy" />
+        <meta itemProp="priceRange" content="R$300–R$899" />
         <meta itemProp="areaServed" content="Campinas, SP" />
         <div className="flex flex-col gap-6 xl:min-h-[600px] xl:flex-row xl:items-end xl:justify-between">
           <div className="flex w-full flex-col gap-6 xl:justify-between">
@@ -166,7 +165,7 @@ export function Me() {
           </div>
           <div className="relative aspect-square bmd:aspect-video h-full overflow-hidden rounded-2xl sm:max-h-[600px] xl:aspect-12/16 xl:max-h-none xl:min-w-1/3">
             <Image
-              src="/images/me.webp"
+              src="/images/elaine.jpeg"
               alt="Elaine, massagista tântrica e Nuru em Campinas — atendimento em ambiente privativo (Av. Brasil)"
               fill
               className="object-cover object-top"
