@@ -7,7 +7,7 @@ import { Studio } from "./(sections)/studio/studio";
 
 export default function Home() {
   return (
-    <div className="mx-auto w-full max-w-[1320px] space-y-20 px-4 lg:max-w-[1540px] lg:px-6">
+    <div className="mx-auto w-full space-y-20 overflow-x-hidden px-4 lg:px-6">
       <Hero />
       <Massages />
       <Me />
