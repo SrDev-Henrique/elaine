@@ -1,0 +1,45 @@
+import { RiArrowRightUpLine, RiWhatsappFill } from "@remixicon/react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+type WhatsappLinkProps = {
+  sm?: boolean;
+};
+
+export function WhatsappLink({ sm = false }: WhatsappLinkProps) {
+  const whatsappNumber = "5519990068060";
+
+  return (
+    <div className="group w-fit rounded-lg border border-chart-3/60 p-2 transition-colors duration-300 hover:border-chart-3/80">
+      <div className="flex items-start justify-between gap-6">
+        <div className="flex items-start gap-2">
+          <RiWhatsappFill className="size-7 text-chart-3" />
+          <div className="space-y-0.5">
+            <p className="cursor-default font-medium text-muted text-sm">
+              Whatsapp
+            </p>
+            <p
+              className={cn(
+                "truncate text-muted-bright-foreground text-xs",
+                sm && "max-w-[100px]",
+              )}
+            >
+              {whatsappNumber}
+            </p>
+          </div>
+        </div>
+        <Button
+          asChild
+          size="icon"
+          variant="ghost"
+          className="size-7 rounded-full border border-muted-foreground text-muted-foreground transition-colors duration-300 group-hover:border-none group-hover:bg-primary-foreground"
+        >
+          <Link href={`https://wa.me/${whatsappNumber}`} target="_blank">
+            <RiArrowRightUpLine />
+          </Link>
+        </Button>
+      </div>
+    </div>
+  );
+}
