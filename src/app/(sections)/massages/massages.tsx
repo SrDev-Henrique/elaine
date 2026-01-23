@@ -1,9 +1,9 @@
 "use client";
 
-import { Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ScheduleButton } from "@/components/dialog-schedule";
 import { Alternate } from "@/components/icons/alternate";
 import { Arrow } from "@/components/icons/arrow";
 import { Button } from "@/components/ui/button";
@@ -106,12 +106,15 @@ export function Massages() {
                   </Tooltip>
                 </div>
                 <div className="flex w-full flex-col items-center gap-4 rounded-xl bg-foreground/56 p-4">
-                  <Button className="cursor-pointer rounded-full py-5.5 pe-2 text-primary-foreground">
-                    Agendar
-                    <div className="rounded-full bg-foreground p-2">
-                      <Calendar className="size-3 sm:size-4" />
-                    </div>
-                  </Button>
+                  <ScheduleButton
+                    massage={
+                      massage.massage as
+                        | "Nuru"
+                        | "Vivência"
+                        | "Mix Tântrico"
+                        | "Tântrica"
+                    }
+                  />
                   <p className="text-primary-foreground" itemProp="description">
                     {massage.description}
                   </p>

@@ -1,9 +1,8 @@
 "use client";
 
-import { Calendar } from "lucide-react";
 import Image from "next/image";
+import { ScheduleButton } from "@/components/dialog-schedule";
 import { Localization } from "@/components/icons/localization";
-import { Button } from "@/components/ui/button";
 
 const popularMassages = ["Nuru", "Vivência", "Mix Tântrico"];
 
@@ -47,12 +46,7 @@ export function Hero() {
               central de Campinas.
             </p>
             <div className="flex w-full items-center justify-between gap-2 lg:justify-start">
-              <Button className="cursor-pointer rounded-full py-5.5 pe-2">
-                Agendar
-                <div className="rounded-full bg-foreground p-2">
-                  <Calendar className="size-3 sm:size-4" />
-                </div>
-              </Button>
+              <ScheduleButton />
               <div
                 className="flex w-fit items-center gap-2 rounded-full border border-primary p-2"
                 itemProp="addressLocality"
@@ -76,12 +70,17 @@ export function Hero() {
                     key={massage}
                     className={`${index === 2 && "bmd:block hidden"}`}
                   >
-                    <Button className="cursor-pointer rounded-3xl border border-primary bg-transparent bmd:py-5 py-4 pe-2 text-primary-foreground">
-                      {massage}
-                      <div className="rounded-full bg-foreground p-2">
-                        <Calendar className="size-3 sm:size-4" />
-                      </div>
-                    </Button>
+                    <ScheduleButton
+                      massage={
+                        massage as
+                          | "Nuru"
+                          | "Vivência"
+                          | "Mix Tântrico"
+                          | "Tântrica"
+                      }
+                      text={massage}
+                      className="cursor-pointer rounded-3xl border border-primary bg-transparent bmd:py-5 py-4 pe-2 text-primary-foreground"
+                    />
                   </div>
                 ))}
               </div>

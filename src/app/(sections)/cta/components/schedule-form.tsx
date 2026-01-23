@@ -25,7 +25,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export function ScheduleForm() {
+export function ScheduleForm({
+  massage,
+}: {
+  massage?: "Nuru" | "Tântrica" | "Mix Tântrico" | "Vivência";
+}) {
   const formSchema = z.object({
     name: z.string().nullable(),
     date: z.custom<DateValue>((val) => val != null, {
@@ -38,7 +42,7 @@ export function ScheduleForm() {
     defaultValues: {
       name: "",
       date: today(getLocalTimeZone()),
-      modality: "Nuru",
+      modality: massage ?? "Nuru",
     },
   });
 

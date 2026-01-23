@@ -294,6 +294,22 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
   }
+  .scrollbar-thumb-only::-webkit-scrollbar {
+    width: 8px; /* largura da scrollbar */
+  }
+
+  .scrollbar-thumb-only::-webkit-scrollbar-track {
+    background: transparent; /* esconde o background */
+  }
+
+  .scrollbar-thumb-only::-webkit-scrollbar-thumb {
+    background-color: oklch(0.3958 0.1331 25.723);
+    border-radius: 999px;
+  }
+
+  .scrollbar-thumb-only::-webkit-scrollbar-button {
+    display: none; /* esconde as setas */
+  }
   .flex-center {
     @apply flex items-center justify-center;
   }

@@ -1,9 +1,8 @@
 import { AvatarFallback } from "@radix-ui/react-avatar";
 import { RiStarFill } from "@remixicon/react";
-import { Calendar } from "lucide-react";
+import { ScheduleButton } from "@/components/dialog-schedule";
 import { Quote } from "@/components/icons/quote";
 import { Avatar } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { reviews } from "../review";
 
@@ -61,13 +60,12 @@ export function ReviewCardContent() {
           </p>
           <div className="flex items-center gap-2">
             {popularMassages.map((massage) => (
-              <Button
+              <ScheduleButton
                 key={massage}
+                text={massage}
+                massage={massage as "Nuru" | "Vivência" | "Mix Tântrico"}
                 className="wrap-normal cursor-pointer rounded-3xl bg-foreground/46 bmd:py-6 py-4 text-primary-foreground text-xs uppercase backdrop-blur-sm hover:bg-foreground/56"
-              >
-                {massage}
-                <Calendar />
-              </Button>
+              />
             ))}
           </div>
         </div>

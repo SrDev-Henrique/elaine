@@ -1,8 +1,7 @@
-import { Calendar } from "lucide-react";
 import Image from "next/image";
 import Script from "next/script";
+import { ScheduleButton } from "@/components/dialog-schedule";
 import { Heart } from "@/components/icons/heart";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const blocksContent = [
@@ -131,12 +130,7 @@ export function Me() {
                     Agende sua sessão e descubra uma experiência sensorial
                     personalizada em Campinas.
                   </p>
-                  <Button className="rounded-full py-5.5 pe-2">
-                    Agendar
-                    <div className="rounded-full bg-foreground p-2">
-                      <Calendar className="size-3 sm:size-4" />
-                    </div>
-                  </Button>
+                  <ScheduleButton />
                 </div>
               </div>
               <div className="grid min-h-40 w-fit grid-cols-2 gap-1.5 self-end">

@@ -1,5 +1,5 @@
-import { Calendar } from "lucide-react";
 import Image from "next/image";
+import { ScheduleButton } from "@/components/dialog-schedule";
 import { Candle } from "@/components/icons/candle";
 import { Car } from "@/components/icons/car";
 import { HotWater } from "@/components/icons/hot-water";
@@ -7,7 +7,6 @@ import { Localization } from "@/components/icons/localization";
 import { Lock } from "@/components/icons/lock";
 import { Spark } from "@/components/icons/spark";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -67,9 +66,15 @@ export function Studio() {
       itemType="https://schema.org/Place"
       className="mx-auto h-fit w-full max-w-[1130px] space-y-10"
     >
-      <meta itemProp="name" content="Ambiente privativo de massagem em Campinas" />
+      <meta
+        itemProp="name"
+        content="Ambiente privativo de massagem em Campinas"
+      />
       <meta itemProp="address" content="Av. Brasil, Campinas, SP" />
-      <meta itemProp="amenityFeature" content="Estacionamento, ducha quente, ambiente privativo" />
+      <meta
+        itemProp="amenityFeature"
+        content="Estacionamento, ducha quente, ambiente privativo"
+      />
       <h2
         id="studio-heading"
         className="text-center font-bold text-4xl md:text-5xl lg:text-6xl"
@@ -152,12 +157,7 @@ export function Studio() {
                   </li>
                 </ul>
               </div>
-              <Button className="w-fit cursor-pointer rounded-full py-5.5 pe-2">
-                Agendar Uma Sessão
-                <div className="rounded-full bg-foreground p-2">
-                  <Calendar className="size-3 sm:size-4" />
-                </div>
-              </Button>
+              <ScheduleButton />
             </div>
           </div>
         </CardContent>
