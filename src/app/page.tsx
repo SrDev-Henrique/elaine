@@ -1,6 +1,7 @@
 import { Hero } from "./(sections)/hero/hero";
 import { Massages } from "./(sections)/massages/massages";
 import { Me } from "./(sections)/me/me";
+import { Review } from "./(sections)/review/review";
 import { Studio } from "./(sections)/studio/studio";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Massages />
       <Me />
       <Studio />
+      <Review />
     </div>
   );
 }
