@@ -64,6 +64,7 @@ export function Massages() {
               className={cn(
                 "relative h-[400px] max-w-md overflow-hidden rounded-4xl bg-muted md:aspect-square md:h-auto md:max-w-sm",
                 massage.color,
+                massage.link,
               )}
               itemScope
               itemType="https://schema.org/Service"
@@ -95,7 +96,7 @@ export function Massages() {
                         asChild
                         className="-rotate-45 size-13 rounded-full bg-foreground hover:bg-foreground/96"
                       >
-                        <Link href={`/massagens/${massage.name}`}>
+                        <Link href={`/massagens/${massage.link}`}>
                           <Arrow size={32} color="#fff" />
                         </Link>
                       </Button>

@@ -2,6 +2,7 @@ type MassageItem = {
   id: number;
   name: string;
   massage: "Nuru" | "Vivência" | "Mix Tântrico" | "Tântrica";
+  link: string;
   color: string;
   description: string;
   image: string;
@@ -11,6 +12,7 @@ export const massages: MassageItem[] = [
   {
     id: 1,
     name: "Massagem Nuru",
+    link: "nuru",
     massage: "Nuru",
     color: "bg-gold",
     description:
@@ -20,6 +22,7 @@ export const massages: MassageItem[] = [
   {
     id: 2,
     name: "Massagem Tântrica",
+    link: "tantrica",
     massage: "Tântrica",
     color: "bg-blue",
     description:
@@ -29,6 +32,7 @@ export const massages: MassageItem[] = [
   {
     id: 3,
     name: "Massagem Mix Tântrico",
+    link: "mix-tantrico",
     massage: "Mix Tântrico",
     color: "bg-strong-purple",
     description:
@@ -38,6 +42,7 @@ export const massages: MassageItem[] = [
   {
     id: 4,
     name: "Massagem Vivência",
+    link: "vivencia",
     massage: "Vivência",
     color:
       "bg-purple",
