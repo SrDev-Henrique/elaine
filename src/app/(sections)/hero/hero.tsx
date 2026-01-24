@@ -15,7 +15,7 @@ export function Hero() {
       itemType="https://schema.org/HealthAndBeautyBusiness"
       className="flex h-fit w-full items-start pt-24 lg:min-h-screen lg:items-center"
     >
-      <div className="flex h-fit w-full flex-col items-center justify-between gap-10 lg:flex-row lg:items-start lg:justify-center">
+      <div className="flex h-fit w-full flex-col items-center justify-between gap-10 lg:flex-row-reverse lg:items-start lg:justify-center">
         <div className="relative aspect-video w-full max-w-2xl overflow-hidden rounded-xl lg:aspect-12/16 lg:max-w-sm">
           <Image
             src="/images/hellen(1).jpeg"
