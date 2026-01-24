@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { massages } from "@/app/(sections)/massages/lib/data";
 import { ScheduleButton } from "@/components/dialog-schedule";
 import { massageDetails } from "@/lib/massages-details";
 
@@ -27,15 +26,9 @@ export default async function MassagePage({
     return slug === nameSlug;
   });
 
-  const massageCard = massages.find((item) => {
-    const nameSlug = normalizeSlug(item.link);
-    return slug === nameSlug;
-  });
-
   if (!detail) return notFound();
 
   const heroTitle = `Massagem ${detail.name}`;
-  const heroImage = massageCard?.image ?? "/images/massage-0.webp";
   const shortDescription =
     detail.description?.[0] ??
     "Sessão exclusiva com foco em presença, relaxamento e sensorialidade em Campinas.";
