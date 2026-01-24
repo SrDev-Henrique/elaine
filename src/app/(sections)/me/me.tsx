@@ -35,8 +35,8 @@ export function Me() {
     name: "Hellen — Massagista",
     description:
       "Massagem tântrica, Nuru e vivência em ambiente privativo na Av. Brasil, Campinas. Técnica, discrição e atendimento personalizado.",
-    url: "https://seusite.com/Hellen-massagem-tantrica-nuru-campinas",
-    image: "https://seusite.com/images/me.webp",
+    url: "https://elainemassagista.com/Hellen-massagem-tantrica-nuru-campinas",
+    image: "https://elainemassagista.com/images/me.webp",
     telephone: "+55 19 XXXXX-XXXX",
     address: {
       "@type": "PostalAddress",
@@ -68,7 +68,7 @@ export function Me() {
       >
         <meta
           itemProp="url"
-          content="https://seusite.com/Hellen-massagem-tantrica-nuru-campinas"
+          content="https://elainemassagista.com/Hellen-massagem-tantrica-nuru-campinas"
         />
         <meta itemProp="telephone" content="+55 19 XXXXX-XXXX" />
         <meta itemProp="priceRange" content="R$400–R$1200" />

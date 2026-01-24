@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Footer } from "@/components/footer";
+import { Navigation } from "@/components/navigation";
 
 export const metadata: Metadata = {
   title: "Hellen Massoterapeuta",
@@ -44,6 +45,7 @@ export default function RootLayout({
         crossOrigin="anonymous"
       />
       <body className="bg-foreground antialiased">
+        <Navigation />
         {children}
         <Footer />
       </body>

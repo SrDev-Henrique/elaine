@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ScheduleButton } from "@/components/dialog-schedule";
@@ -13,6 +14,50 @@ const normalizeSlug = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { massage: MassageSlug };
+}): Promise<Metadata> {
+  const awaitedParams = await params;
+  const slug = normalizeSlug(decodeURIComponent(awaitedParams.massage));
+  const detail = massageDetails.find(
+    (item) => normalizeSlug(item.slug) === slug,
+  );
+  if (!detail) {
+    return {
+      title: "Massagem em Campinas",
+      description: "Sessões sensoriais e privativas em Campinas.",
+    };
+  }
+
+  const title = `Massagem ${detail.name} em Campinas | Hellen`;
+  const description =
+    detail.description?.[0] ??
+    "Sessão exclusiva com foco em presença, relaxamento e sensorialidade em Campinas.";
+  const url = `https://elainemassagista.com/massagens/${detail.slug}`;
+  const image = "/images/hellen(1).jpeg";
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "article",
+      images: [{ url: image, alt: `${detail.name} - massagem em Campinas` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+  };
+}
+
 export default async function MassagePage({
   params,
 }: {
@@ -20,7 +65,6 @@ export default async function MassagePage({
 }) {
   const awaitedParams = await params;
   const slug = normalizeSlug(decodeURIComponent(awaitedParams.massage));
-
   const detail = massageDetails.find((item) => {
     const nameSlug = normalizeSlug(item.slug);
     return slug === nameSlug;
