@@ -35,7 +35,7 @@ export async function generateMetadata({
   const description =
     detail.description?.[0] ??
     "Sessão exclusiva com foco em presença, relaxamento e sensorialidade em Campinas.";
-  const url = `https://elainemassagista.com/massagens/${detail.slug}`;
+  const url = `https://hellenmassagista.com/massagens/${detail.slug}`;
   const image = "/images/hellen(1).jpeg";
 
   return {

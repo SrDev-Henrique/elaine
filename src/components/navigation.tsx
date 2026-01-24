@@ -84,20 +84,31 @@ export function Navigation() {
       <div
         className={cn(
           "transition-all duration-200 lg:hidden",
-          open ? "max-h-screen opacity-100" : "max-h-0 opacity-0",
+          open
+            ? "pointer-events-auto max-h-screen opacity-100"
+            : "pointer-events-none max-h-0 opacity-0",
         )}
       >
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 pb-4 md:px-6">
-          {navItems.map((item) => (
+          {!isHome ? (
             <Link
-              key={item.href}
-              href={item.href}
-              onClick={close}
-              className="rounded-2xl border border-foreground/15 bg-foreground/40 px-4 py-3 font-medium text-primary-foreground text-sm transition-colors hover:bg-primary/10"
+              href="/"
+              className="rounded-full bg-foreground px-3 py-2 font-medium text-muted text-sm transition-colors hover:bg-foreground/80 hover:text-primary-foreground"
             >
-              {item.label}
+              Início
             </Link>
-          ))}
+          ) : (
+            navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={close}
+                className="rounded-2xl border border-foreground/15 bg-foreground/40 px-4 py-3 font-medium text-primary-foreground text-sm transition-colors hover:bg-primary/10"
+              >
+                {item.label}
+              </Link>
+            ))
+          )}
           <ScheduleButton className="w-full justify-between bg-primary text-primary-foreground hover:bg-primary/90" />
         </div>
       </div>
