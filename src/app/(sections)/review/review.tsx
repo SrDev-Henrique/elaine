@@ -88,7 +88,13 @@ export function Review() {
             data-position={index + 1}
           >
             <meta itemProp="position" content={(index + 1).toString()} />
-            <meta itemProp="author" content={review.name} />
+            <span itemProp="itemReviewed" itemScope itemType="https://schema.org/LocalBusiness">
+              <meta itemProp="name" content="Hellen Massagista Sensual em Campinas" />
+              <meta itemProp="servesCuisine" content="Massagem tântrica, Nuru, Mix Tântrico, Vivência" />
+            </span>
+            <span itemProp="author" itemScope itemType="https://schema.org/Person">
+              <meta itemProp="name" content={review.name} />
+            </span>
             <meta itemProp="reviewBody" content={review.review} />
             <ReviewCard {...review} />
           </div>
