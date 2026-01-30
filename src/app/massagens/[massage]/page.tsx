@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { ScheduleButton } from "@/components/dialog-schedule";
 import { massageDetails } from "@/lib/massages-details";
 
 type MassageSlug = "nuru" | "tantrica" | "mix-tantrico" | "vivencia" | string;
 
-const normalizeSlug = (value: string) =>
+export const normalizeSlug = (value: string) =>
   value
     .toLowerCase()
     .normalize("NFD")
@@ -31,11 +32,13 @@ export async function generateMetadata({
     };
   }
 
+  const canonicalSlug = normalizeSlug(decodeURIComponent(detail.slug));
+
   const title = `Massagem ${detail.name} em Campinas | Hellen`;
   const description =
-    detail.description?.[0] ??
+    detail.metaDescription ??
     "Sessão exclusiva com foco em presença, relaxamento e sensorialidade em Campinas.";
-  const url = `https://hellenmassagista.com/massagens/${detail.slug}`;
+  const url = `https://hellenmassagista.com/massagens/${canonicalSlug}`;
   const image = "/images/hellen(1).jpeg";
 
   return {
@@ -71,6 +74,19 @@ export default async function MassagePage({
   });
 
   if (!detail) return notFound();
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: detail.commonDoubts.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
 
   const heroTitle = `Massagem ${detail.name}`;
   const shortDescription =
@@ -199,6 +215,13 @@ export default async function MassagePage({
         </div>
         <ScheduleButton massage={detail.name} text="Agendar agora" />
       </section>
+      <Script
+        id="faq-structured-data"
+        type="application/ld+json"
+        suppressHydrationWarning
+      >
+        {JSON.stringify(faqJsonLd)}
+      </Script>
     </main>
   );
 }
