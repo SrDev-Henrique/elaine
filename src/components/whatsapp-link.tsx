@@ -1,5 +1,6 @@
+"use client";
+
 import { RiArrowRightUpLine, RiWhatsappFill } from "@remixicon/react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -9,6 +10,18 @@ type WhatsappLinkProps = {
 
 export function WhatsappLink({ sm = false }: WhatsappLinkProps) {
   const whatsappNumber = "5519990068060";
+  function onClick(
+    massage: "Nuru" | "Tântrica" | "Mix Tântrico" | "Vivência" | undefined,
+  ) {
+    const message = massage
+      ? `Olá, eu vim pelo site e gostaria de agendar uma sessão de massagem ${massage}, quando teria disponibilidade?`
+      : "Olá, eu vim pelo site e gostaria de agendar uma sessão de massagem";
+
+    const phoneNumber = "5519990068060";
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  }
 
   return (
     <div className="group w-fit rounded-lg border border-chart-3/60 p-2 transition-colors duration-300 hover:border-chart-3/80">
@@ -34,10 +47,9 @@ export function WhatsappLink({ sm = false }: WhatsappLinkProps) {
           size="icon"
           variant="ghost"
           className="size-7 rounded-full border border-muted-foreground text-muted-foreground transition-colors duration-300 group-hover:border-none group-hover:bg-primary-foreground"
+          onClick={() => onClick(undefined)}
         >
-          <Link href={`https://wa.me/${whatsappNumber}`} target="_blank">
-            <RiArrowRightUpLine />
-          </Link>
+          <RiArrowRightUpLine />
         </Button>
       </div>
     </div>

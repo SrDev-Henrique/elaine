@@ -43,7 +43,7 @@ export function Navigation() {
           <span className="h-9 w-9 flex-center rounded-full bg-foreground/55">
             <RelaxedIcon width={28} height={28} />
           </span>
-          Hellen Massagista Sensual
+          Hellen Massagista
         </Link>
 
         <nav className="hidden items-center gap-4 lg:flex">
