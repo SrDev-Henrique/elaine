@@ -37,7 +37,7 @@ export function Me() {
     >
       <meta
         itemProp="url"
-        content="https://hellenmassagista.com/Hellen-massagem-tantrica-nuru-campinas"
+        content="https://hellenmassagista.com/Hellen-massagem-corporal-sensorial-campinas"
       />
       <meta itemProp="telephone" content="+55 19 XXXXX-XXXX" />
       <meta itemProp="priceRange" content="R$400–R$1200" />

@@ -6,7 +6,10 @@ import { Avatar } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { reviews } from "../review";
 
-const popularMassages = ["Nuru", "Vivência", "Mix Tântrico"];
+const popularMassages = [
+  { id: 1, massage: "Massagem Sensorial Com Gel", displayName: "sensorial com gel" },
+  { id: 2, massage: "Sessão Interativa Guiada", displayName: "interativa guiada" },
+];
 export function ReviewCardContent() {
   return (
     <div className="absolute inset-0 flex flex-col justify-between gap-6 bmd:px-6 px-4 bmd:py-6 py-4">
@@ -58,12 +61,12 @@ export function ReviewCardContent() {
           <p className="font-semibold bmd:text-base text-primary-foreground text-xs">
             Mais populares
           </p>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             {popularMassages.map((massage) => (
               <ScheduleButton
-                key={massage}
-                text={massage}
-                massage={massage as "Nuru" | "Vivência" | "Mix Tântrico"}
+                key={massage.id}
+                text={massage.displayName}
+                massage={massage.massage as "Massagem Sensorial Com Gel" | "Sessão Interativa Guiada" | "Sessão Combinada Sensorial" | "Sessão de Presença Corporal"}
                 className="wrap-normal cursor-pointer rounded-3xl bg-foreground/46 bmd:py-6 py-4 text-primary-foreground text-xs uppercase backdrop-blur-sm hover:bg-foreground/56"
               />
             ))}

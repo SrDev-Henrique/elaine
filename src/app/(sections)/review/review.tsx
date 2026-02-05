@@ -15,7 +15,7 @@ export const reviews: Review[] = [
     name: "Henrique A",
     fallback: "HA",
     review:
-      "Atendimento impecável: ambiente discreto, estacionamento no local e ducha quente — tudo pensado no conforto. A sessão Nuru foi técnica e muito respeitosa. Recomendo!",
+      "Atendimento impecável: ambiente discreto, estacionamento no local e ducha quente — tudo pensado no conforto. A sessão sensorial com gel foi técnica e muito respeitosa. Recomendo!",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ export const reviews: Review[] = [
     name: "Marcelo P",
     fallback: "MP",
     review:
-      "Fiz a massagem Nuru e foi incrível! A profissional foi muito atenciosa e o ambiente estava muito limpo. Recomendo pra quem quer relaxar e se sentir bem.",
+      "Fiz a massagem sensorial com gel e foi incrível! A profissional foi muito atenciosa e o ambiente estava muito limpo. Recomendo pra quem quer relaxar e se sentir bem.",
   },
   {
     id: 5,
