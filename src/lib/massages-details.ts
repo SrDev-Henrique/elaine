@@ -1,5 +1,9 @@
 export type MassageDetail = {
-  name: "Nuru" | "Tântrica" | "Mix Tântrico" | "Vivência";
+  name:
+    | "Massagem Sensorial Com Gel"
+    | "Sessão Interativa Guiada"
+    | "Sessão Combinada Sensorial"
+    | "Sessão de Presença Corporal";
   description: string[];
   slug: string;
   benefits: string[];
@@ -11,11 +15,11 @@ export type MassageDetail = {
 
 export const massageDetails: MassageDetail[] = [
   {
-    name: "Nuru",
-    slug: "nuru",
+    name: "Massagem Sensorial Com Gel",
+    slug: "sensorial-com-gel",
     description: [
-      "A massagem Nuru é uma técnica japonesa corpo a corpo que usa um gel à base de algas para criar deslizamento contínuo e contato pele a pele.",
-      "O foco está no relaxamento profundo e no despertar sensorial, sempre mantendo respeito aos limites acordados antes da sessão.",
+      "Sessão sensorial com gel vegetal para aumentar o deslizamento das mãos sobre o corpo, priorizando relaxamento profundo e bem-estar geral.",
+      "Tudo é feito com consentimento e comunicação clara, em ambiente privado, com foco em conforto e segurança.",
     ],
     benefits: [
       "Relaxamento muscular intenso e alívio de tensões",
@@ -24,15 +28,15 @@ export const massageDetails: MassageDetail[] = [
       "Estímulo circulatório suave devido aos deslizamentos",
     ],
     indicatedFor: [
-      "Pessoas que buscam uma experiência sensorial diferenciada",
-      "Quem deseja relaxar com toques contínuos e envolventes",
-      "Clientes que valorizam privacidade e clima intimista",
+      "Pessoas que buscam uma experiência sensorial relaxante",
+      "Quem deseja aliviar tensões com toques contínuos e suaves",
+      "Clientes que valorizam privacidade e ambiente controlado",
     ],
     sessionFlow: [
-      "Boas-vindas, briefing sobre limites e objetivos, e ducha opcional.",
-      "Aplicação do gel nuru e início dos deslizamentos corpo a corpo.",
+      "Boas-vindas, alinhamento de objetivos, higiene das mãos e ducha opcional.",
+      "Aplicação do gel vegetal e início dos deslizamentos com pressão ajustável.",
       "Ritmo moderado, com foco em relaxar e manter comunicação aberta.",
-      "Encerramento gradual, limpeza do gel e orientações pós-sessão.",
+      "Encerramento gradual, remoção do excesso de gel e orientações pós-sessão.",
     ],
     commonDoubts: [
       {
@@ -46,19 +50,19 @@ export const massageDetails: MassageDetail[] = [
           "Não. Fornecemos gel, toalhas e ducha. Basta chegar com alguns minutos de antecedência.",
       },
       {
-        question: "Há nudez?",
+        question: "Como funciona a condução da sessão?",
         answer:
-          "A técnica é corpo a corpo e pode envolver nudez consensual. Todos os limites são combinados antes.",
+          "A sessão é realizada com técnicas de toque consciente e orientação profissional, respeitando sempre os limites combinados previamente. O conforto, a privacidade e o bem-estar do cliente são prioridades em todo o atendimento.",
       },
     ],
-    metaDescription: `A massagem Nuru é uma sessão orientada para relaxamento profundo e estimulação sensorial realizada com um gel condutor à base de algas, formulado para promover deslizamento confortável e seguro entre o terapeuta e o cliente. Geralmente oferecemos opções de 60 e 90 minutos, onde o tempo inclui recepção, briefing inicial, período de aplicação da técnica e encerramento com limpeza e orientações. A experiência começa com um acolhimento e alinhamento de expectativas: falamos sobre histórico de saúde, alergias, preferências de pressão e limites, garantindo consentimento contínuo durante toda a sessão. Em seguida é possível optar por uma ducha breve antes da aplicação do gel; o profissional aplica o produto e conduz movimentos contínuos e fluídos que visam reduzir tensões musculares, melhorar a circulação superficial e favorecer a sensação de presença e relaxamento. Indicação: pessoas que buscam um momento de relaxamento sensorial, aumento da percepção corporal e alívio de tensão acumulada; também é indicada para quem valoriza um atendimento discreto e personalizado. Contraindicações e cuidados: não recomendamos para quem tem feridas abertas, infecções de pele, alergia conhecida a componentes do gel, doenças contagiosas cutâneas, ou em casos específicos de condições médicas graves sem liberação médica. Gestantes devem consultar antes — determinadas fases da gestação exigem restrições. Ambiente: atendimento em sala privada, higienizada, com toalhas limpas, produtos descartáveis quando aplicável e possibilidade de ducha; o local é preparado para garantir conforto e privacidade. Pós-sessão: é recomendado hidratar-se e evitar atividades intensas nas próximas horas; o terapeuta fornece orientações personalizadas. FAQ curto: 1) “Dói?” — Não; a técnica é suave e focada no deslizamento, a pressão é ajustada ao cliente. 2) “Posso parar a qualquer momento?” — Sim, consentimento é contínuo. 3) “Quanto tempo antes devo chegar?” — Chegue 10 minutos antes para o briefing.`,
+    metaDescription: `Massagem sensorial com gel vegetal, voltada a relaxamento profundo, alívio de tensões e aumento da consciência corporal. Sessões de 60 ou 90 minutos incluem acolhimento, briefing de saúde e limites, prática com deslizamentos suaves e orientações finais. Ambiente privado, higienizado, com ducha opcional e comunicação constante para ajustar pressão e ritmo. Indicada para quem busca relaxamento e bem-estar; contraindicações incluem feridas abertas, infecções de pele ou condições médicas sem liberação. Após a sessão, recomenda-se hidratação e evitar esforço intenso.`,
   },
   {
-    name: "Tântrica",
-    slug: "tantrica",
+    name: "Sessão de Presença Corporal",
+    slug: "presenca-corporal",
     description: [
-      "A massagem tântrica trabalha respiração, toques conscientes e ritmos alternados para despertar a energia vital e ampliar a percepção do próprio corpo.",
-      "É feita de forma respeitosa, com foco no autoconhecimento, no relaxamento profundo e na liberação de bloqueios sensoriais.",
+      "Sessão focada em respiração guiada, toques conscientes e ritmos alternados para ampliar a percepção corporal e promover equilíbrio emocional.",
+      "Abordagem respeitosa, com foco em autoconhecimento, relaxamento e liberação de tensões, sempre dentro de limites acordados.",
     ],
     benefits: [
       "Maior percepção corporal e presença no momento",
@@ -69,7 +73,7 @@ export const massageDetails: MassageDetail[] = [
     indicatedFor: [
       "Quem busca autoconhecimento e conexão mente-corpo",
       "Pessoas que desejam reduzir ansiedade e tensões",
-      "Clientes que querem explorar o prazer de forma segura e consciente",
+      "Clientes que querem aprofundar presença e equilíbrio emocional",
     ],
     sessionFlow: [
       "Conversas iniciais para alinhar expectativas, saúde e limites.",
@@ -79,29 +83,29 @@ export const massageDetails: MassageDetail[] = [
     ],
     commonDoubts: [
       {
-        question: "Há foco apenas no prazer?",
+        question: "Qual é o objetivo da sessão?",
         answer:
-          "O foco é a consciência corporal e a energia vital; prazer pode surgir, mas a proposta é terapêutica e respeitosa.",
+          "O objetivo é terapêutico e voltado ao bem-estar, com foco em respiração, presença e relaxamento profundo. A sessão busca promover equilíbrio físico e emocional em um ambiente profissional e acolhedor.",
       },
       {
         question: "Preciso ter experiência prévia?",
         answer:
-          "Não. Tudo é explicado antes e conduzido no seu ritmo, com comunicação aberta.",
+          "Não. A sessão é explicada previamente e conduzida de forma gradual, respeitando o ritmo individual, com comunicação clara durante todo o atendimento.",
       },
       {
-        question: "Existe toque íntimo obrigatório?",
+        question: "Como são definidos os limites durante a sessão?",
         answer:
-          "Não. Nada é obrigatório. Todos os limites são definidos e respeitados antes e durante a sessão.",
+          "Antes do início, são alinhadas expectativas, conforto e limites pessoais. Todo o atendimento é conduzido com respeito, consentimento e atenção ao bem-estar do cliente.",
       },
     ],
-    metaDescription: `A massagem tântrica oferecida aqui é uma abordagem centrada na respiração, presença e toque consciente, criada para promover autoconhecimento, relaxamento profundo e maior sintonia entre corpo e mente. Uma sessão típica tem duração de 60 ou 90 minutos, dependendo do objetivo do cliente; o tempo inclui recepção, conversa inicial sobre histórico e limites, prática guiada e um período final de integração. O atendimento inicia com um briefing detalhado para alinhar expectativas, esclarecer condições de saúde e definir limites claros; essa etapa é essencial para garantir conforto e segurança. A técnica combina exercícios de respiração, toques lentos e conscientes e sequências rítmicas que ajudam a liberar tensões musculares e emocionais, melhorar a qualidade da respiração e aumentar a percepção corporal. Indicações: pessoas que buscam reduzir ansiedade, trabalhar bloqueios emocionais, aprimorar a consciência corporal ou experimentar práticas de relaxamento profundo com orientação profissional. Contraindicações: não é recomendada para quem se encontra em condições médicas instáveis sem liberação profissional, pacientes com feridas abertas ou infecções cutâneas, casos de doenças contagiosas ou quando há histórico de reações adversas a manipulações corporais intensas; gestantes devem consultar antes. Ambiente e estrutura: sala privada, climatizada quando necessário, higienizada a cada atendimento, com música ambiente suave e toalhas limpas; paramos a qualquer sinal de desconforto e mantemos comunicação constante. Pós-sessão: o cliente recebe tempo para integração, recomendações de hidratação e orientações simples para continuidade do cuidado. FAQ curto: 1) “É terapêutico ou somente sensorial?” — O foco é terapêutico com benefícios sensoriais. 2) “Preciso estar em forma física específica?” — Não; as técnicas são adaptáveis. 3) “Como são definidos os limites?” — No briefing inicial e durante toda a sessão.`,
+    metaDescription: `Sessão de presença corporal com respiração guiada e toques conscientes para promover autoconhecimento, relaxamento e equilíbrio emocional. Durações de 60 ou 90 minutos incluem acolhimento, briefing de saúde e limites, prática guiada e integração final. Indicada para reduzir ansiedade, melhorar percepção corporal e favorecer bem-estar. Contraindicações: condições médicas instáveis sem liberação, feridas abertas, infecções cutâneas ou doenças contagiosas. Ambiente privado, higienizado e com comunicação contínua para ajustes de conforto. Recomenda-se hidratação e atividades leves após a sessão.`,
   },
   {
-    name: "Mix Tântrico",
-    slug: "mix-tantrico",
+    name: "Sessão Combinada Sensorial",
+    slug: "combinada-sensorial",
     description: [
-      "O Mix Tântrico combina técnicas tântricas com toques sensoriais e alongamentos leves para uma experiência personalizada.",
-      "A sessão adapta ritmo e intensidade conforme o feedback do cliente, equilibrando relaxamento e presença.",
+      "Integra diferentes abordagens sensoriais, respiração e alongamentos leves para personalizar a experiência.",
+      "Ritmo e intensidade são ajustados conforme feedback, equilibrando relaxamento e presença corporal.",
     ],
     benefits: [
       "Relaxamento profundo com variedade de estímulos",
@@ -110,21 +114,21 @@ export const massageDetails: MassageDetail[] = [
       "Melhora na consciência respiratória e postural",
     ],
     indicatedFor: [
-      "Quem deseja um blend de técnicas com personalização",
+      "Quem deseja combinação de técnicas com personalização",
       "Pessoas com tensões físicas e mentais que buscam alívio",
-      "Clientes que querem explorar sensações com orientação próxima",
+      "Clientes que querem orientação próxima e ajustes contínuos",
     ],
     sessionFlow: [
       "Anamnese breve para entender necessidades e preferências.",
-      "Respiração guiada, toques tântricos e sensoriais combinados.",
+      "Respiração guiada, toques corporais sensoriais combinados.",
       "Alongamentos leves ou ajustes posturais quando apropriado.",
       "Desaceleração final e orientações para pós-sessão.",
     ],
     commonDoubts: [
       {
-        question: "Em que difere da tântrica tradicional?",
+        question: "Em que difere da massagem tradicional?",
         answer:
-          "Inclui mistura de toques sensoriais e alongamentos leves, personalizando a experiência além da estrutura clássica.",
+          "Inclui mistura de toques sensoriais e alongamentos leves, personalizando a experiência além de protocolos fixos.",
       },
       {
         question: "Posso escolher a intensidade?",
@@ -137,13 +141,13 @@ export const massageDetails: MassageDetail[] = [
           "Sim. É conduzida com explicações e ajustes contínuos para seu conforto.",
       },
     ],
-    metaDescription: `Mix Tântrico é uma sessão personalizada que combina práticas de toque consciente, exercícios respiratórios e alongamentos suaves, desenhada para quem busca tanto relaxamento quanto um trabalho mais profundo de liberação de tensões e equilíbrio corporal. Oferecemos formatos de 60 e 90 minutos; a sessão inclui recepção, anamnese, prática guiada e um período final de integração e orientações pós-sessão. No início fazemos uma anamnese rápida para mapear histórico de saúde, preferências de pressão e eventuais limitações físicas. A partir daí a experiência é moldada: alternamos toques tântricos mais lentos com estímulos sensoriais variados, incorporamos alongamentos leves quando necessário para aliviar pontos de tensão e mantemos comunicação constante para ajustar intensidade. Indicações: clientes com dores de tensão, estresse acumulado, rigidez postural ou que procurem uma experiência que una técnicas de relaxamento com intervenções físicas leves para melhora da mobilidade. Contraindicações: feridas abertas, infecções de pele, problemas médicos que impeçam manipulação corporal sem liberação, e situações agudas que exijam acompanhamento médico; em caso de dúvida, pedimos orientação profissional antes do agendamento. Ambiente: sala preparada para acolhimento, limpeza entre atendimentos, música cuidadosa e privacidade total. Recomendações pós-sessão incluem hidratação, descanso leve e evitar atividades físicas intensas nas próximas horas. FAQ curto: 1) “Tenho dor nas costas, posso fazer?” — Sim, ajustamos toques e alongamentos conforme necessidade. 2) “Preciso alongar antes?” — Não é necessário; tudo é conduzido pelo terapeuta. 3) “Há parte educativa?” — Sim, damos orientações posturais simples quando aplicável.`,
+    metaDescription: `Sessão combinada sensorial com toque consciente, exercícios respiratórios e alongamentos suaves, ajustada para relaxamento, liberação de tensões e equilíbrio corporal. Formatos de 60 ou 90 minutos contemplam acolhimento, anamnese, prática guiada e integração. Indicada para quem enfrenta tensão muscular, estresse ou rigidez postural e busca uma abordagem personalizada. Contraindicações: feridas abertas, infecções de pele, condições médicas graves sem liberação. Ambiente privado e higienizado; comunicação contínua para ajustar pressão e ritmo. Após a sessão, recomenda-se hidratação e evitar esforço intenso.`,
   },
   {
-    name: "Vivência",
-    slug: "vivencia",
+    name: "Sessão Interativa Guiada",
+    slug: "interativa-guiada",
     description: [
-      "A Vivência é uma prática interativa com troca de toques orientados, favorecendo presença, conexão e escuta corporal.",
+      "Sessão interativa e guiada com exercícios simples de toque consciente para aumentar presença, conexão e escuta corporal.",
       "Envolve participação ativa do cliente, sempre com consentimento, instruções claras e acompanhamento contínuo.",
     ],
     benefits: [
@@ -155,7 +159,7 @@ export const massageDetails: MassageDetail[] = [
     indicatedFor: [
       "Quem deseja uma experiência participativa e guiada",
       "Pessoas interessadas em exercitar limites e consentimento",
-      "Casos em que a curiosidade sobre trocas de toque é central",
+      "Quem busca melhorar comunicação de limites e presença corporal",
     ],
     sessionFlow: [
       "Briefing detalhado sobre dinâmica, papéis e consentimentos.",
@@ -167,20 +171,20 @@ export const massageDetails: MassageDetail[] = [
       {
         question: "Preciso ter experiência prévia?",
         answer:
-          "Não. Tudo é explicado antes e durante. Você participa apenas dentro dos limites combinados.",
+          "Não. A proposta é acessível para qualquer pessoa. Todas as etapas são explicadas antes e durante a sessão, respeitando seus limites e conforto.",
       },
       {
         question: "O que acontece se eu ficar desconfortável?",
         answer:
-          "A sessão pode ser pausada ou ajustada a qualquer momento; o consentimento é contínuo.",
+          "A sessão pode ser ajustada ou pausada a qualquer momento. A comunicação é constante e o bem-estar do cliente é sempre prioridade.",
       },
       {
-        question: "Existe nudez obrigatória?",
+        question: "Os limites são respeitados durante a sessão?",
         answer:
-          "Não. O nível de exposição é combinado previamente e respeitado integralmente.",
+          "Sim. Os limites são definidos previamente e mantidos durante todo o atendimento, com comunicação aberta e contínua.",
       },
     ],
     metaDescription:
-      "A Vivência é uma proposta de sessão interativa que combina orientação, prática de escuta corporal e exercícios simples de troca de toque, sempre com foco no consentimento, na segurança e na presença. As sessões costumam ocorrer em durações de 60 ou 90 minutos, contemplando um momento de acolhimento e briefing, a prática orientada, pausas para feedback e um tempo de integração ao final. No briefing inicial explicamos com clareza a dinâmica, papéis, limites e sinais de segurança; esse alinhamento permite que a pessoa participe no seu ritmo, sempre com autonomia para interromper ou ajustar a experiência. Durante a prática, o terapeuta orienta sequências de movimentos e toques, convida a explorar sensações corporais e a observar respostas físicas e emocionais, sempre respeitando o espaço e a privacidade do participante. Indicações: ideal para quem quer trabalhar comunicação de limites, aumentar a consciência relacion",
+      "Sessão interativa guiada com foco em presença, escuta corporal e comunicação de limites. Inclui acolhimento, briefing claro sobre dinâmica e segurança, prática orientada com toques conscientes e pausas para feedback, finalizando com integração e recomendações simples. Indicada para quem quer desenvolver consciência corporal e comunicação de limites em ambiente seguro e privado. Contraindicações: condições médicas instáveis sem liberação, infecções cutâneas ativas ou qualquer situação que impeça participação confortável.",
   },
 ];

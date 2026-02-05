@@ -1,7 +1,7 @@
 type MassageItem = {
   id: number;
   name: string;
-  massage: "Nuru" | "Vivência" | "Mix Tântrico" | "Tântrica";
+  massage: "Sensorial com gel" | "Interativa guiada" | "Combinada sensorial" | "Presença corporal";
   link: string;
   color: string;
   description: string;
@@ -11,43 +11,42 @@ type MassageItem = {
 export const massages: MassageItem[] = [
   {
     id: 1,
-    name: "Massagem Nuru",
-    link: "nuru",
-    massage: "Nuru",
+    name: "Massagem Sensorial Com Gel",
+    link: "sensorial-com-gel",
+    massage: "Sensorial com gel",
     color: "bg-gold",
     description:
-      "Técnica japonesa diferenciada que utiliza gel especial à base de algas. A massagem nuru proporciona deslizamento contínuo, relaxamento intenso e uma experiência sensorial única em ambiente discreto.",
-      image: "/images/massage-0.webp",
+      "Técnica que utiliza gel vegetal para aumentar o deslizamento entre mãos e corpo, promovendo relaxamento intenso, redução de tensões e experiência sensorial em estúdio privativo.",
+    image: "/images/massage-0.webp",
   },
   {
     id: 2,
-    name: "Massagem Tântrica",
-    link: "tantrica",
-    massage: "Tântrica",
+    name: "Sessão de Presença Corporal",
+    link: "presenca-corporal",
+    massage: "Presença corporal",
     color: "bg-blue",
     description:
-      "Experiência sensorial que desperta a energia vital e amplia a conexão corporal. A massagem tântrica favorece o autoconhecimento, o relaxamento profundo e o bem-estar físico e emocional.",
+      "Sessão terapêutica voltada à presença corporal, respiração guiada e toques conscientes, com objetivo de promover autoconhecimento, equilíbrio emocional e relaxamento profundo.",
     image: "/images/massage-1.webp",
-    },
+  },
   {
     id: 3,
-    name: "Massagem Mix Tântrico",
-    link: "mix-tantrico",
-    massage: "Mix Tântrico",
+    name: "Sessão Combinada Sensorial",
+    link: "combinada-sensorial",
+    massage: "Combinada sensorial",
     color: "bg-strong-purple",
     description:
-      "Sessão combinada que une técnicas tântricas e toques conscientes para aprofundar a presença corporal, liberar tensões e ampliar o bem-estar emocional, sempre com respeito e consentimento",
+      "Sessão que integra diferentes abordagens sensoriais e técnicas de toque consciente para aprofundar presença, liberar tensões e promover bem-estar emocional, sempre respeitando limites e consentimento.",
     image: "/images/massage-2.webp",
   },
   {
     id: 4,
-    name: "Massagem Vivência",
-    link: "vivencia",
-    massage: "Vivência",
-    color:
-      "bg-purple",
+    name: "Sessão Interativa Guiada",
+    link: "interativa-guiada",
+    massage: "Interativa guiada",
+    color: "bg-purple",
     description:
-      "Sessão interativa que envolve troca de toques entre cliente e terapeuta. Na massagem vivência, o cliente participa ativamente, explorando sensações, presença corporal e conexão.",
+      "Sessão interativa com orientação do terapeuta para explorar sensações, presença e autoconsciência em ambiente seguro e guiado; indicada para quem busca maior conexão corporal e relaxamento.",
     image: "/images/massage-3.webp",
   },
 ];

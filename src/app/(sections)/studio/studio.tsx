@@ -20,22 +20,22 @@ const studioImages = [
   {
     id: 1,
     image: "/images/studio-0.webp",
-    alt: "Studio de massagem tântrica e Nuru em Campinas",
+    alt: "Studio de massagem corporal sensorial em Campinas",
   },
   {
     id: 2,
     image: "/images/studio-1.webp",
-    alt: "Studio de massagem tântrica e Nuru em Campinas",
+    alt: "Studio de massagem corporal sensorial em Campinas",
   },
   {
     id: 3,
     image: "/images/studio-2.webp",
-    alt: "Studio de massagem tântrica e Nuru em Campinas",
+    alt: "Studio de massagem corporal sensorial em Campinas",
   },
   {
     id: 4,
     image: "/images/studio-3.webp",
-    alt: "Studio de massagem tântrica e Nuru em Campinas",
+    alt: "Studio de massagem corporal sensorial em Campinas",
   },
 ];
 

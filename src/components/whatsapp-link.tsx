@@ -11,7 +11,7 @@ type WhatsappLinkProps = {
 export function WhatsappLink({ sm = false }: WhatsappLinkProps) {
   const whatsappNumber = "5519990068060";
   function onClick(
-    massage: "Nuru" | "Tântrica" | "Mix Tântrico" | "Vivência" | undefined,
+    massage: "Massagem Sensorial Com Gel" | "Sessão Interativa Guiada" | "Sessão Combinada Sensorial" | "Sessão de Presença Corporal" | undefined,
   ) {
     const message = massage
       ? `Olá, eu vim pelo site e gostaria de agendar uma sessão de massagem ${massage}, quando teria disponibilidade?`

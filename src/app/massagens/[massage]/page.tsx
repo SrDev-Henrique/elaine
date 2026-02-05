@@ -5,7 +5,12 @@ import Script from "next/script";
 import { ScheduleButton } from "@/components/dialog-schedule";
 import { massageDetails } from "@/lib/massages-details";
 
-type MassageSlug = "nuru" | "tantrica" | "mix-tantrico" | "vivencia" | string;
+type MassageSlug =
+  | "massagem-sensorial-com-gel"
+  | "interativa-guiada"
+  | "combinada-sensorial"
+  | "presenca-corporal"
+  | string;
 
 export const normalizeSlug = (value: string) =>
   value
@@ -206,7 +211,9 @@ export default async function MassagePage({
             Pronto para sua sessão?
           </p>
           <h4 className="font-semibold text-2xl text-primary-foreground">
-            Agende sua Massagem {detail.name} em Campinas
+            Agende sua{" "}
+            {detail.name}{" "}
+            em Campinas
           </h4>
           <p className="text-muted-bright-foreground">
             Atendimento discreto, higienizado e guiado com respeito aos seus

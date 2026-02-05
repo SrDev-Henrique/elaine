@@ -63,14 +63,17 @@ export function Review() {
       itemType="https://schema.org/ItemList"
       className="mx-auto min-h-screen w-full max-w-[1130px] space-y-10"
     >
-      <meta itemProp="name" content="Avaliações de clientes de massagem em Campinas" />
+      <meta
+        itemProp="name"
+        content="Avaliações de clientes de massagem em Campinas"
+      />
       <meta itemProp="itemListOrder" content="Unordered" />
       <meta itemProp="numberOfItems" content={reviews.length.toString()} />
       <div className="relative h-fit w-full overflow-hidden rounded-xl">
         <div className="relative bmd:min-h-[570px] min-h-[500px] w-full">
           <Image
             src="/images/review(1).webp"
-            alt="Ambiente acolhedor para massagem tântrica e Nuru em Campinas"
+            alt="Ambiente acolhedor para massagem corporal sensorial em Campinas"
             fill
             className="object-cover object-center brightness-60"
             itemProp="image"
@@ -88,11 +91,22 @@ export function Review() {
             data-position={index + 1}
           >
             <meta itemProp="position" content={(index + 1).toString()} />
-            <span itemProp="itemReviewed" itemScope itemType="https://schema.org/LocalBusiness">
-              <meta itemProp="name" content="Hellen Massagista Sensual em Campinas" />
-              <meta itemProp="servesCuisine" content="Massagem tântrica, Nuru, Mix Tântrico, Vivência" />
+            <span
+              itemProp="itemReviewed"
+              itemScope
+              itemType="https://schema.org/LocalBusiness"
+            >
+              <meta itemProp="name" content="Hellen Massagista em Campinas" />
+              <meta
+                itemProp="servesCuisine"
+                content="Massagem Sensorial Com Gel, Sessão Interativa Guiada, Sessão Combinada Sensorial, Sessão de Presença Corporal"
+              />
             </span>
-            <span itemProp="author" itemScope itemType="https://schema.org/Person">
+            <span
+              itemProp="author"
+              itemScope
+              itemType="https://schema.org/Person"
+            >
               <meta itemProp="name" content={review.name} />
             </span>
             <meta itemProp="reviewBody" content={review.review} />

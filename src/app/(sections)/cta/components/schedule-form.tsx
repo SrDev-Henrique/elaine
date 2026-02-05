@@ -28,21 +28,21 @@ import {
 export function ScheduleForm({
   massage,
 }: {
-  massage?: "Nuru" | "Tântrica" | "Mix Tântrico" | "Vivência";
+  massage?: "Massagem Sensorial Com Gel" | "Sessão Interativa Guiada" | "Sessão Combinada Sensorial" | "Sessão de Presença Corporal";
 }) {
   const formSchema = z.object({
     name: z.string().nullable(),
     date: z.custom<DateValue>((val) => val != null, {
       message: "Selecione uma data",
     }),
-    modality: z.enum(["Nuru", "Tântrica", "Mix Tântrico", "Vivência"]),
+    modality: z.enum(["Massagem Sensorial Com Gel", "Sessão Interativa Guiada", "Sessão Combinada Sensorial", "Sessão de Presença Corporal"]),
   });
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       date: today(getLocalTimeZone()),
-      modality: massage ?? "Nuru",
+      modality: massage ?? "Massagem Sensorial Com Gel",
     },
   });
 
@@ -124,10 +124,10 @@ export function ScheduleForm({
                       <SelectValue placeholder="Selecione a modalidade" />
                     </SelectTrigger>
                     <SelectContent className="bg-foreground text-primary-foreground [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2 [&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8">
-                      <SelectItem value="Nuru">Nuru</SelectItem>
-                      <SelectItem value="Tântrica">Tântrica</SelectItem>
-                      <SelectItem value="Mix Tântrico">Mix Tântrico</SelectItem>
-                      <SelectItem value="Vivência">Vivência</SelectItem>
+                      <SelectItem value="Massagem Sensorial Com Gel">Massagem Sensorial Com Gel</SelectItem>
+                      <SelectItem value="Sessão Interativa Guiada">Sessão Interativa Guiada</SelectItem>
+                      <SelectItem value="Sessão Combinada Sensorial">Sessão Combinada Sensorial</SelectItem>
+                      <SelectItem value="Sessão de Presença Corporal">Sessão de Presença Corporal</SelectItem>
                     </SelectContent>
                   </Select>
                 </FormControl>

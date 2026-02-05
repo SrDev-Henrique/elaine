@@ -4,8 +4,6 @@ import Image from "next/image";
 import { ScheduleButton } from "@/components/dialog-schedule";
 import { Localization } from "@/components/icons/localization";
 
-const popularMassages = ["Nuru", "Vivência", "Mix Tântrico"];
-
 export function Hero() {
   return (
     <section
@@ -19,7 +17,7 @@ export function Hero() {
         <div className="relative aspect-video w-full max-w-2xl overflow-hidden rounded-xl lg:aspect-12/16 lg:max-w-sm">
           <Image
             src="/images/hellen(1).jpeg"
-            alt="Hellen, massoterapeuta especializada em massagem tântrica e Nuru em Campinas"
+            alt="Hellen, massoterapeuta especializada em massagem corporal sensorial em Campinas"
             fill
             className="object-cover object-[50%_20%] lg:object-center"
             itemProp="image"
@@ -32,18 +30,18 @@ export function Hero() {
               itemProp="name"
               className="font-bold text-[3.5rem] sm:text-4xl lg:text-7xl"
             >
-              Massagem Tântrica e Nuru em Campinas
+              Massagem corporal sensorial em Campinas
             </h1>
             <p
               itemProp="description"
               className="text-muted-bright-foreground text-sm lg:pt-4 lg:text-base"
             >
               <span className="font-bold text-muted">
-                Massagem tântrica e Nuru em Campinas
-              </span>
-              , pensadas para despertar sensações com técnica, presença e
-              ambiente intimista. Atendimento em estúdio privativo na região
-              central de Campinas.
+                Sessões de massagem corporal sensorial
+              </span>{" "}
+              em estúdio privativo na região central de Campinas. Técnicas com
+              foco em relaxamento, presença e bem-estar. Atendimento
+              confidencial e personalizado — agende uma avaliação.
             </p>
             <div className="flex w-full items-center justify-between gap-2 lg:justify-start">
               <ScheduleButton />
@@ -58,31 +56,6 @@ export function Hero() {
                     Campinas, SP
                   </span>
                 </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-2 rounded-full bg-foreground/30 p-2">
-              <p className="text-nowrap font-semibold bmd:text-base text-primary-foreground text-xs">
-                Mais populares
-              </p>
-              <div className="flex items-center gap-2 overflow-hidden lg:justify-between">
-                {popularMassages.map((massage, index) => (
-                  <div
-                    key={massage}
-                    className={`${index === 2 && "bmd:block hidden"}`}
-                  >
-                    <ScheduleButton
-                      massage={
-                        massage as
-                          | "Nuru"
-                          | "Vivência"
-                          | "Mix Tântrico"
-                          | "Tântrica"
-                      }
-                      text={massage}
-                      className="cursor-pointer rounded-3xl border border-primary bg-transparent bmd:py-5 py-4 pe-2 text-primary-foreground"
-                    />
-                  </div>
-                ))}
               </div>
             </div>
           </div>

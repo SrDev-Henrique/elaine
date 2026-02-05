@@ -110,10 +110,10 @@ export function Massages() {
                   <ScheduleButton
                     massage={
                       massage.massage as
-                        | "Nuru"
-                        | "Vivência"
-                        | "Mix Tântrico"
-                        | "Tântrica"
+                        | "Massagem Sensorial Com Gel"
+                        | "Sessão Interativa Guiada"
+                        | "Sessão Combinada Sensorial"
+                        | "Sessão de Presença Corporal"
                     }
                   />
                   <p className="text-primary-foreground" itemProp="description">

@@ -10,21 +10,21 @@ import {
 export const faq = [
   {
     id: 1,
-    question: "O que é a massagem Nuru e como ela é feita?",
+    question: "O que é a Massagem Sensorial Com Gel e como ela é feita?",
     answer:
-      "A massagem Nuru é uma técnica corpo-a-corpo originária do Japão que utiliza um gel específico deslizante para promover toque pele-a-pele. No nosso espaço a sessão é realizada com produtos seguros e neutros, higiene rigorosa e comunicação clara sobre limites durante toda a experiência.",
+      "É uma sessão sensorial que utiliza gel vegetal para melhorar o deslizamento das mãos sobre o corpo, com foco em relaxamento profundo e bem-estar. Trabalhamos com comunicação clara sobre limites e ajustes de pressão, em ambiente privado e higienizado.",
   },
   {
     id: 2,
-    question: "O que é a massagem Mix Tântrico?",
+    question: "O que é a Sessão de Presença Corporal?",
     answer:
-      "Mix Tântrico é uma combinação de técnicas tântricas e sensoriais (toques conscientes, alongamentos leves e respiração guiada) montada de forma personalizada. A ideia é unir relaxamento e despertar sensorial, sempre com respeito ao seu ritmo e limites.",
+      "É uma sessão com respiração guiada, toques conscientes e ritmo moderado para ampliar a percepção do corpo e reduzir tensões. O objetivo é equilíbrio emocional e relaxamento, sempre respeitando os limites combinados.",
   },
   {
     id: 3,
-    question: "O que é a Vivência e como funciona a troca mútua?",
+    question: "O que é a Sessão Interativa Guiada?",
     answer:
-      "A Vivência é uma prática interativa onde há troca de papéis e toques orientados para aumentar presença e conexão. Antes da sessão explicamos claramente a dinâmica, definimos consentimentos e limites, e acompanhamos toda a prática para garantir segurança e conforto.",
+      "É uma prática participativa com orientações simples de toque consciente, presença e comunicação de limites. A pessoa segue instruções em tempo real, com pausas para feedback, mantendo sempre segurança e conforto.",
   },
   {
     id: 4,

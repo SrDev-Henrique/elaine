@@ -7,7 +7,7 @@ import { WhatsappFixedButton } from "@/components/whatsapp-fixed-button";
 export const metadata: Metadata = {
   title: "Hellen Massoterapeuta",
   description:
-    "Sou Hellen, massoterapeuta especializada em massagem nuru, tântrica, mix tântrico e vivência em Campinas, Avenida Brasil. Tenho mais de 2 anos de experiência na área da massagem sensual em campinas.",
+    "Sou Hellen, massoterapeuta especializada em massagens corporais sensoriais, Campinas. Tenho mais de 2 anos de experiência em massagens relaxantes e terapêuticas em Campinas.",
 };
 
 const businessLd = {
@@ -15,7 +15,7 @@ const businessLd = {
   "@type": "LocalBusiness",
   name: "Hellen — Massagista",
   description:
-    "Massagem tântrica, Nuru, Mix Tântrico e Vivência em ambiente privativo na Av. Brasil, Campinas. Técnica, discrição e atendimento personalizado.",
+    "Sessões de massagem corporal sensorial e terapêutica em ambiente privativo na Av. Brasil, Campinas. Técnicas focadas em relaxamento profundo, alívio de tensão e bem-estar. Agende uma masssagem.",
   url: "https://hellenmassagista.com/",
   image: "https://hellenmassagista.com/images/me.webp",
   telephone: "+55 19 99006-8060",

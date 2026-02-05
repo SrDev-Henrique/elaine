@@ -12,7 +12,7 @@ export function Cta() {
       <meta itemProp="name" content="Agendar sessão de massagem em Campinas" />
       <meta
         itemProp="description"
-        content="Formulário para agendamento de massagem tântrica, Nuru, Mix Tântrico ou Vivência em Campinas."
+        content="Formulário para agendamento de massagem seonsorial com gel, interativa guiada, combinada sensorial ou presença corporal em Campinas."
       />
       <h2
         id="cta-heading"

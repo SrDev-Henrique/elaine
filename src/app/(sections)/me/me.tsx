@@ -50,8 +50,8 @@ export function Me() {
               itemProp="name"
               className="font-bold text-4xl md:text-5xl lg:text-6xl"
             >
-              Hellen - Massagista <span className="text-gold">Tântrica</span>,{" "}
-              <span className="text-gold">Nuru e Vivência</span> em Campinas -
+              Hellen - Massagista <span className="text-gold">Corporal Sensorial</span>,{" "}
+              em Campinas -
               SP
             </h2>
 
@@ -65,7 +65,7 @@ export function Me() {
               <p itemProp="description">
                 Eu sou uma massagista certificada especializada em{" "}
                 <span className="text-gold">
-                  massagem tântrica, Nuru e vivência em Campinas
+                  massagens corporais sensoriais
                 </span>
                 , atendendo em ambiente privativo e discreto na Av. Brasil.
               </p>
@@ -79,7 +79,7 @@ export function Me() {
                 Cada atendimento é planejado com cuidados de higiene, conforto e
                 respeito aos seus limites — óleos aquecidos, respiração guiada e
                 toques conscientes que equilibram{" "}
-                <span className="text-gold">relaxamento e prazer sutil</span>.
+                <span className="text-gold">relaxamento e bem-estar</span>.
               </p>
               <p itemProp="description">
                 Se você busca uma{" "}
@@ -129,7 +129,7 @@ export function Me() {
         <div className="relative aspect-square h-full overflow-hidden rounded-2xl sm:max-h-[700px]">
           <Image
             src="/images/hellen.jpeg"
-            alt="Hellen, massagista tântrica e Nuru em Campinas — atendimento em ambiente privativo (Av. Brasil)"
+            alt="Hellen, massagista corporal sensorial em Campinas — atendimento em ambiente privativo (Av. Brasil)"
             fill
             className="object-cover object-[50%_35%]"
             itemProp="image"

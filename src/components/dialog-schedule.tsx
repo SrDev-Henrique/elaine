@@ -10,11 +10,21 @@ export function ScheduleButton({
   text = "Agendar",
 }: {
   className?: string;
-  massage?: "Nuru" | "Tântrica" | "Mix Tântrico" | "Vivência" | undefined;
+  massage?:
+    | "Massagem Sensorial Com Gel"
+    | "Sessão Interativa Guiada"
+    | "Sessão Combinada Sensorial"
+    | "Sessão de Presença Corporal"
+    | undefined;
   text?: string;
 }) {
   function onClick(
-    massage: "Nuru" | "Tântrica" | "Mix Tântrico" | "Vivência" | undefined,
+    massage:
+      | "Massagem Sensorial Com Gel"
+      | "Sessão Interativa Guiada"
+      | "Sessão Combinada Sensorial"
+      | "Sessão de Presença Corporal"
+      | undefined,
   ) {
     const message = massage
       ? `Olá, eu vim pelo site e gostaria de agendar uma sessão de massagem ${massage}, quando teria disponibilidade?`
